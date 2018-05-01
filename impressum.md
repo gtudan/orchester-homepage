@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Impressum
+permalink: /impressum
 ---
 
 Oskar Gründer Gymnasium<br/>

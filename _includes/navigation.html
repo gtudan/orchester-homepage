@@ -1,0 +1,38 @@
+<label for="show-menu" class="show-menu">&#9776;</label>
+<input type="checkbox" id="show-menu" role="button">
+<nav class="navbar">
+
+    <div class="container">
+        <ul class="navbar-list">
+            <li class="navbar-item ">
+                <a class="navbar-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+            </li>
+            <li class="navbar-item ">
+                <a class="navbar-link {% if page.url  == '/termine' %}active{% endif %}" href="{{ '/termine' | relative_url }}">Termine</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link {% if page.url  contains '/gallerie' %}active{% endif %}" href="{{ '/galerie' | relative_url }}">Galerie</a>
+                <div class="popover">
+                    <ul class="popover-list">
+                        {%- for path in page_paths -%}
+                        {%- assign my_page = site.pages | where: "path", path | first -%}
+                        {%- if my_page.layout == 'gallery' -%}
+                        <li class="popover-item"><a class="popover-link"
+                                                    href="{{ my_page.url | relative_url }}">
+                            {{ my_page.title | escape }}
+                        </a></li>
+                        {%- endif -%}
+                        {%- endfor -%}
+                    </ul>
+                </div>
+            </li>
+            <li class="navbar-item ">
+                <a class="navbar-link {% if '/presse' == page.url %}active{% endif %}" href="{{ '/presse' | relative_url }}">Presse</a></li>
+            <li class="navbar-item">
+                <a class="navbar-link {% if '/impressum' == page.url %}active{% endif %}" href="{{ '/impressum' | relative_url }}">Impressum</a></li>
+            <li class="navbar-item">
+                <a class="navbar-link {% if '/datenschutz' == page.url %}active{% endif %}" href="{{ '/datenschutz' | relative_url }}">Datenschutz</a>
+            </li>
+        </ul>
+    </div>
+</nav>

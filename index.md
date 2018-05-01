@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Über uns
+title: Blasorchester des Gymnasiums Gebesee
 ---
 
 Begonnen hat alles im September 1993 mit einer aus 45 Schülern der 5. und 6. Klassen unseres Gymnasiums bestehenden
@@ -10,6 +10,14 @@ wenigen Wochen  hatten wir den ersten Auftritt.
 
 Inzwischen nimmt die Anzahl musikbegeisterter Schüler, die als Vorstufe Blockflöte und später ein Orchesterinstrument
 erlernen wollen, am Oskar- Gründler- Gymnasium Gebesee immer weiter zu.
+
+<div class="row">
+    <div class="two columns">&nbsp;</div>
+    <div class="eight columns">
+        <img src="{{'/assets/images/intro.jpg' | relative_url }}" alt="Gruppenbild" class="u-max-full-width"/>
+    </div>
+    <div class="two columns"></div>
+</div>
 
 Das abwechslungsreiche Repertoire unseres Orchesters umfasst hauptsächlich symphonische Blasmusik, u.a. aus den
 Bereichen Musical, Film, Jazz, Rock, Latin. Der qualifizierte Instrumentalunterricht wird hauptsächlich über das

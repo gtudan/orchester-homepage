@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Datenschutz
+permalink: /datenschutz
 ---
 
 Durch den Besuch der Webseite des Anbieters können Informationen über den Zugriff (Datum, Uhrzeit, betrachtete Seite)

@@ -1,5 +1,6 @@
 ---
 layout: default
+categories: ["gallery"]
 custom_css: halkaBox.min.css
 custom_js: halkaBox.min.js
 ---
@@ -15,7 +16,7 @@ custom_js: halkaBox.min.js
 
     <div class="one-third column">
         <a href="{{ image.path | relative_url }}" class="gallery1">
-            <img class="gallery-image" src="{{ image.path | relative_url }}"/>
+            <img class="u-max-full-width" src="{{ image.path | relative_url }}"/>
         </a>
     </div>
     {% assign i = i | plus:1 | modulo:3 %}

@@ -5,6 +5,7 @@
 
 .navbar,
 .navbar-spacer {
+  font-family: "Open Sans", sans-serif;
   display: block;
   width: 100%;
   height: 6.5rem;
@@ -12,6 +13,7 @@
   z-index: 99;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
 }
 
 .navbar-spacer {
@@ -45,25 +47,11 @@
 }
 
 .navbar-link.active {
-  color: #33C3F0;
+  color: #669999;
 }
 
 .navbar-item:hover .popover {
   display: block;
-}
-
-.has-docked-nav .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.has-docked-nav .navbar-spacer {
-  display: block;
-}
-
-.has-docked-nav .navbar > .container {
-  width: 80%;
 }
 
 .popover {
@@ -78,8 +66,8 @@
   z-index: 100;
 }
 
-.popover-item:first-child .popover-link:after,
-.popover-item:first-child .popover-link:before {
+.popover-item .popover-link:after,
+.popover-item .popover-link:before {
   bottom: 100%;
   left: 50%;
   border: solid transparent;
@@ -90,13 +78,13 @@
   pointer-events: none;
 }
 
-.popover-item:first-child .popover-link:after {
+.popover-item .popover-link:after {
   border: 10px rgba(255, 255, 255, 0);
   border-bottom-color: #fff;
   margin-left: -10px;
 }
 
-.popover-item:first-child .popover-link:before {
+.popover-item .popover-link:before {
   border: 11px rgba(238, 238, 238, 0);
   border-bottom-color: #eee;
   margin-left: -11px;
@@ -128,7 +116,7 @@
   white-space: nowrap;
 }
 
-.popover-item:first-child .popover-link {
+.popover-item .popover-link {
   border-radius: 4px 4px 0 0;
 }
 
@@ -139,10 +127,49 @@
 
 .popover-link:hover {
   color: #fff;
-  background: #33C3F0;
+  background: #226666;
 }
 
 .popover-link:hover,
-.popover-item:first-child .popover-link:hover:after {
-  border-bottom-color: #33C3F0;
+.popover-item .popover-link:hover:after {
+  border-bottom-color: #226666;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+  text-align: center;
+  font-size: 4.0rem;
+  padding: 10px 0;
+  display: none;
+}
+
+/*Hide checkbox*/
+#show-menu{
+  display: none;
+}
+#show-menu:checked ~ .navbar{
+  display: block;
+}
+
+/*Responsive Styles*/
+@media screen and (max-width : 760px){
+  .show-menu {
+    display:block;
+  }
+  .navbar {
+    position: static;
+    display: none;
+  }
+  .navbar-item {
+    text-align: center;
+    width: 100%;
+  }
+  .navbar-link {
+    margin: auto;
+    width: 100%;
+  }
+
+  .popover {
+    display: none !important;
+  }
 }
