@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Blasorchester des Gymnasiums Gebesee
+title: Blasorchester des Oskar-Gründler-Gymnasiums Gebesee
 ---
 
 Begonnen hat alles im September 1993 mit einer aus 45 Schülern der 5. und 6. Klassen unseres Gymnasiums bestehenden
