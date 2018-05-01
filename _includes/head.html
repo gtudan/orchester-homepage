@@ -1,0 +1,16 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{site.title}}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/normalize.css' | relative_url }}"/>
+    <link rel="stylesheet" href="{{ '/assets/css/skeleton.css' | relative_url }}"/>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+    {% for stylesheet in layout.custom_css %}
+    <link rel="stylesheet" href="{{ '/assets/css/' | append:stylesheet | relative_url }}" type="text/css">
+    {% endfor %}
+
+    {% for js_file in layout.custom_js %}
+    <script src="{{ '/assets/js/' | append: js_file | relative_url }}" type="text/javascript"></script>
+    {% endfor %}
+</head>
