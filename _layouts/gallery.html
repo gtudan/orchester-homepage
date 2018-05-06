@@ -5,29 +5,30 @@ custom_css: halkaBox.min.css
 custom_js: halkaBox.min.js
 ---
 
-<header>
-    <h1>{{ page.title | escape }}</h1>
-</header>
+<div class="container">
+    <header>
+        <h1>{{ page.title | escape }}</h1>
+    </header>
 
-<div class="row">
-    {% assign i = 0 %}
-    {% for image in site.static_files %}
-    {% if image.path contains page.folder %}
+    <div class="row">
+        {% assign i = 0 %}
+        {% for image in site.static_files %}
+        {% if image.path contains page.folder %}
 
-    <div class="one-third column">
-        <a href="{{ image.path | relative_url }}" class="gallery1">
-            <img class="u-max-full-width" src="{{ image.path | relative_url }}"/>
-        </a>
-    </div>
-    {% assign i = i | plus:1 | modulo:3 %}
-    {% if  i == 0%}
+        <div class="one-third column">
+            <a href="{{ image.path | relative_url }}" class="gallery1">
+                <img class="u-max-full-width" src="{{ image.path | relative_url }}"/>
+            </a>
+        </div>
+        {% assign i = i | plus:1 | modulo:3 %}
+        {% if i == 0%}
     </div>
     <div class="row">
-    {% endif %}
-    {% endif %}
-    {% endfor %}
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </div>
 </div>
-
 <script>
 
     window.onload = function () {
